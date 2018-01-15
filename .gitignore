@@ -7,6 +7,19 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.DS_STORE
+
+
+
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+gilded-rose.iml
+.idea/.name
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/libraries/Maven__junit_junit_3_8_1.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
