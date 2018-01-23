@@ -7,15 +7,9 @@ import org.junit.Test;
 
 public class GildedRoseTest {
 
-    @Test
-    public void sellinPlusOneCase() {
-        Item[] items = new Item[] {new Item("test", 2, 10)};
-        GildedRose gildedRose = new GildedRose(items);
-        gildedRose.updateQuality();
-        assertEquals(9 , gildedRose.items[0].quality);
-        assertEquals(1, gildedRose.items[0].sellIn);
-    }
 
+
+    @Test
     public void non_specific_object_quality_and_price_decrease_by_one () {
 
         Item item = new Item("apple",2,10);
@@ -33,6 +27,28 @@ public class GildedRoseTest {
         solftly.assertThat(item.sellIn)
                 .as("Apple price")
                 .isEqualTo(1);
+
+        solftly.assertAll();
+    }
+
+    @Test
+    public void aged_brie_quality_and_price () {
+
+        Item item = new Item("Aged Brie",0,40);
+        Item[] items = new Item[] {item};
+
+        GildedRose tavern = new GildedRose(items);
+
+        tavern.updateQuality();
+
+        SoftAssertions solftly = new SoftAssertions();
+        solftly.assertThat(item.quality)
+                .as("Aged Brie quality")
+                .isEqualTo(42);
+
+        solftly.assertThat(item.sellIn)
+                .as("Aged Brie price")
+                .isEqualTo(-1);
 
         solftly.assertAll();
     }
