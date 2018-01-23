@@ -53,5 +53,26 @@ public class GildedRoseTest {
         solftly.assertAll();
     }
 
+    @Test
+    public void backstage_passes_quality_and_price () {
+
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert",0,40);
+        Item[] items = new Item[] {item};
+
+        GildedRose tavern = new GildedRose(items);
+
+        tavern.updateQuality();
+
+        SoftAssertions solftly = new SoftAssertions();
+        solftly.assertThat(item.quality)
+                .as("Backstage passes quality")
+                .isEqualTo(0);
+
+        solftly.assertThat(item.sellIn)
+                .as("Backstage passes price")
+                .isEqualTo(-1);
+
+        solftly.assertAll();
+    }
 }
 
