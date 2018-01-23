@@ -96,4 +96,22 @@ public class GildedRoseTest {
 
         solftly.assertAll();
     }
+
+    @Test
+    public void non_specific_object_to_string() {
+
+        Item item = new Item("apple",0,40);
+        Item[] items = new Item[] {item};
+
+        GildedRose tavern = new GildedRose(items);
+
+        tavern.toString();
+
+        SoftAssertions solftly = new SoftAssertions();
+        solftly.assertThat(item.toString())
+                .as("Apple description")
+                .isEqualTo("apple, 0, 40");
+
+        solftly.assertAll();
+    }
 }
