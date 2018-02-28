@@ -25,10 +25,6 @@ public class Item {
         return quality;
     }
 
-    public void setName(String pName){
-        name = pName;
-    }
-
     public void setSellIn(int pSellIn){
         sellIn = pSellIn;
     }

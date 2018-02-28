@@ -98,6 +98,28 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void sulfuras_quality_and_price () {
+
+        Item item = new Item("Sulfuras, Hand of Ragnaros",0,40);
+        Item[] items = new Item[] {item};
+
+        GildedRose tavern = new GildedRose(items);
+
+        tavern.updateQuality();
+
+        SoftAssertions solftly = new SoftAssertions();
+        solftly.assertThat(item.getQuality())
+                .as("Sulfuras quality")
+                .isEqualTo(40);
+
+        solftly.assertThat(item.getSellIn())
+                .as("Sulfuras price")
+                .isEqualTo(0);
+
+        solftly.assertAll();
+    }
+
+    @Test
     public void non_specific_object_to_string() {
 
         Item item = new Item("apple",0,40);
