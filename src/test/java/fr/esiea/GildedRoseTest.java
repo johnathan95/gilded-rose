@@ -20,11 +20,11 @@ public class GildedRoseTest {
         tavern.updateQuality();
 
         SoftAssertions solftly = new SoftAssertions();
-        solftly.assertThat(item.quality)
+        solftly.assertThat(item.getQuality())
                 .as("Apple quality")
                 .isEqualTo(9);
 
-        solftly.assertThat(item.sellIn)
+        solftly.assertThat(item.getSellIn())
                 .as("Apple price")
                 .isEqualTo(1);
 
@@ -42,11 +42,11 @@ public class GildedRoseTest {
         tavern.updateQuality();
 
         SoftAssertions solftly = new SoftAssertions();
-        solftly.assertThat(item.quality)
+        solftly.assertThat(item.getQuality())
                 .as("Aged Brie quality")
                 .isEqualTo(42);
 
-        solftly.assertThat(item.sellIn)
+        solftly.assertThat(item.getSellIn())
                 .as("Aged Brie price")
                 .isEqualTo(-1);
 
@@ -64,11 +64,11 @@ public class GildedRoseTest {
         tavern.updateQuality();
 
         SoftAssertions solftly = new SoftAssertions();
-        solftly.assertThat(item.quality)
+        solftly.assertThat(item.getQuality())
                 .as("Backstage passes quality")
                 .isEqualTo(0);
 
-        solftly.assertThat(item.sellIn)
+        solftly.assertThat(item.getSellIn())
                 .as("Backstage passes price")
                 .isEqualTo(-1);
 
@@ -86,11 +86,11 @@ public class GildedRoseTest {
         tavern.updateQuality();
 
         SoftAssertions solftly = new SoftAssertions();
-        solftly.assertThat(item.quality)
+        solftly.assertThat(item.getQuality())
                 .as("Apple quality")
                 .isEqualTo(38);
 
-        solftly.assertThat(item.sellIn)
+        solftly.assertThat(item.getSellIn())
                 .as("Apple price")
                 .isEqualTo(-1);
 
