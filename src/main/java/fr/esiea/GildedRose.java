@@ -62,7 +62,7 @@ public class GildedRose {
         return item;
     }
 
-    public Item updateNonSpecificItem(Item item){
+    public Item updateNonSpecificItem(Item item) {
         if (item.getQuality() > 0) {
             item.setQuality(item.getQuality() - 1);
         }
@@ -74,5 +74,9 @@ public class GildedRose {
             }
         }
         return item;
+    }
+
+    public Item[] getItems() {
+        return items;
     }
 }
